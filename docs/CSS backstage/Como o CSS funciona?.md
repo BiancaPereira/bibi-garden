@@ -1,8 +1,10 @@
+#performance #css #crp
 
 > [!info] Referências
 > - https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 > - https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path
 > - https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS
+> - https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
 
 ### Início
 - Para renderizar na tela um documento, o navegador combina o HTML e CSS dele.
@@ -82,3 +84,9 @@
 - Priorize a ordem e carregue os recursos prioritários primeiro.
 - Diminuia o número de requests e o diminua o tamanho dos arquivos prioritários.
 - Diminua a quantidade de arquivos principais e deixe com que os arquivos não-críticos sejam carregados depois ou de forma assíncrona.
+
+### Problemas de performance
+- Maiores problemas de performance na web:
+	- 🟠  **Período de latência** (tempo do início de um evento até ele de fato iniciar a execução).
+	- Navegadores são single-thread (executam um comando por vez).
+- Para que o site seja rápido, é necessário minimizar as requisições da thread principal.
