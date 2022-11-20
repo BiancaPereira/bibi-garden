@@ -15,13 +15,16 @@
 
 ### 5 passos do CRP
 1. Navegador carrega o HTML e converte ele em DOM.
-3. Depois é carregado o CSS com outros recursos necessários (o Javascript é manipulado em outro momento).
-4. É feito a análise do CSS, onde é inserido os estilos para o nó correto da árvore do DOM (essa é a **render tree**: CSS + HTML juntos).
+2. Depois é carregado o CSS e construído o CSSOM.
+3. É feito a análise do CSS, onde é inserido os estilos para o nó correto da árvore do DOM (essa é a **render tree**: CSS + HTML juntos).
+4. O layout é quando é calculado o tamanho e localização de cada node na tela.
 5. A página é exibida na tela através do processo de **painting**. 
 
 ![[Pasted image 20221119223639.png]]
 
 > Depois que é carregado o Javascript, pode ser que a árvore DOM seja modificada.
+
+> Enquanto o CSS está sendo transformado, o Javascript está sendo baixo e compilado.
 
 ### DOM (Document Object Model)
 - Árvore criada a partir do HMTL.
@@ -62,6 +65,7 @@ P
 - Esse tipo de otimização é bem mínima, pois o navegador renderiza essa árvore do CSS **muito rápido**.
 
 ### Melhorando a performance do CSS
+- As partes que mais travam no carregamento da tela são os scrollings e animações.
 - Minimize os arquivos.
 - Separe os arquivos de forma que o navegador só carregue aquilo que é necessário naquela hora, como:
 
@@ -88,7 +92,7 @@ P
 ### Layout
 - O layout é o processo que determina o tamanho e a localização de tudo na página.
 - Depois que o layout é determinado, os pixels são pintados na tela.
-- Ele depende do tamanho da tela.
+- Ele depende do tamanho da tela (viewport size).
 - Determia o tamanho e altura de cada elemento.
 - Determina onde cada elemento fica em relação aos outros.
 - Toda vez que a render tree é modificada, o processo de layout é ativado.
@@ -98,9 +102,16 @@ P
 ### Painting
 - O paint é o último passo, ele é responsável por pintar os pixels na tela.
 - Ao carregar uma tela, a tela inteira sofre o painting.
+	- Esse primeiro painting é chamado de "first meaningful paint".
 - Depois, apenas a parte necessária da tela que sofrer mudanças sofrerá o re-painting.
 - Paiting é um processo bem rápido, e não impacta tanto na performance.
 - O tempo do paiting demora de acordo com o tipo de mudança que é feita.
+
+### Reflow
+- Reflow é quando é necessário ser feito mudanças de tamanho ou posição (mudanças de **layout**) após o primeiro carregamento da página.
+- Exemplo:
+	- Imagine que você carregou um documento HTML com uma imagem, e essa imagem vai ser baixada só depois.
+	- Se você não determinou o tamanho dessa imagem no HTML, então quando ela for carrega será feito um processo de reflow.
 
 ### Otimizando o CRP
 - Priorize a ordem e carregue os recursos prioritários primeiro.
@@ -128,3 +139,8 @@ P
 	- É preciso que já seja enviado nesses 14kb o HTML/CSS que deve ser exibido nessa primeira chamada.
 	- Depois que é recebido o HTML/CSS e Javascript inicial, que eles começam a ser carregados e transformados em render tree, até que sejam renderizados na tela.
 - Tags `<script>` sem `async` geralmente bloqueiam o carregamento da página (por isso costumamos deixar eles no fim do da tag `<body>`).
+
+### Accessibility Tree
+- Existe uma árvore de acessibilidade que é como se fosse o DOM semântico.
+- Ela é a **AOM** - Accessibility Object Model.
+- Enquanto a AOM não é construída, a página não é acessível a leitores de tela.
