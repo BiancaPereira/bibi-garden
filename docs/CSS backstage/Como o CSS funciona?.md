@@ -90,3 +90,11 @@
 	- 🟠  **Período de latência** (tempo do início de um evento até ele de fato iniciar a execução).
 	- Navegadores são single-thread (executam um comando por vez).
 - Para que o site seja rápido, é necessário minimizar as requisições da thread principal.
+- Quando o site carrega pela primeira vez, é necessário fazer uma busca de **DNS** do site.
+	- A latência de uma rede de celular para fazer essa busca pode ser demorada.
+	- Depois que o endereço de **IP** é localizado, será aberto uma comunicação entre o navegador e o servidor, através do **TCP**.
+![[Pasted image 20221120184907.png]]
+
+- Para começar a estabelecer uma conexão com o servidor e poder fazer as primeiras requisições, todo o caminho abaixo é feito:
+![[Pasted image 20221120185434.png]]
+
