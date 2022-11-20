@@ -13,9 +13,8 @@
 ### Critical Rendering Path
 - É o passo a passo para o navegador converter HTML + CSS + JS em pixels na tela.
 
-### Passo a passo
-1. Navegador carrega o HTML.
-2. Depois converte o HTML em DOM.
+### 5 passos do CRP
+1. Navegador carrega o HTML e converte ele em DOM.
 3. Depois é carregado o CSS com outros recursos necessários (o Javascript é manipulado em outro momento).
 4. É feito a análise do CSS, onde é inserido os estilos para o nó correto da árvore do DOM (essa é a **render tree**: CSS + HTML juntos).
 5. A página é exibida na tela através do processo de **painting**. 
@@ -29,6 +28,29 @@
 - A construção do DOM é incremental e não bloqueia a página.
 - Quando mais nodes você tiver, mais tempo o CRP vai tomar.
 - Alguns nodes a mais não fazem diferença, mas se tiver muitos pode impactar na performance.
+
+Exemplo de DOM:
+```html
+<p>
+  Let's use:
+  <span>Cascading</span>
+  <span>Style</span>
+  <span>Sheets</span>
+</p>
+```
+
+Como eles se organizam em nodes:
+```
+P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+    └─ "Sheets"
+```
+
 
 ### CSSOM (CSS Object Model)
 - Árvore criada a partir do CSS.
@@ -90,6 +112,8 @@
 	- 🟠  **Período de latência** (tempo do início de um evento até ele de fato iniciar a execução).
 	- Navegadores são single-thread (executam um comando por vez).
 - Para que o site seja rápido, é necessário minimizar as requisições da thread principal.
+
+### Como é feito as requisições ao browser
 - Quando o site carrega pela primeira vez, é necessário fazer uma busca de **DNS** do site.
 	- A latência de uma rede de celular para fazer essa busca pode ser demorada.
 	- Depois que o endereço de **IP** é localizado, será aberto uma comunicação entre o navegador e o servidor, através do **TCP**.
@@ -98,3 +122,9 @@
 - Para começar a estabelecer uma conexão com o servidor e poder fazer as primeiras requisições, todo o caminho abaixo é feito:
 ![[Pasted image 20221120185434.png]]
 
+### Primeira renderização
+- Na primeira renderização geralmente é feito uma **chamada de 14kb**, e depois essa chamada vai aumentando de tamanho de acordo com o tanto que a rede aguenta.
+	- Por isso é importante priorizar o que é trazido na primeira chamada ao servidor.
+	- É preciso que já seja enviado nesses 14kb o HTML/CSS que deve ser exibido nessa primeira chamada.
+	- Depois que é recebido o HTML/CSS e Javascript inicial, que eles começam a ser carregados e transformados em render tree, até que sejam renderizados na tela.
+- Tags `<script>` sem `async` geralmente bloqueiam o carregamento da página (por isso costumamos deixar eles no fim do da tag `<body>`).
