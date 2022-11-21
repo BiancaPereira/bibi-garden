@@ -107,6 +107,12 @@ P
 - Paiting é um processo bem rápido, e não impacta tanto na performance.
 - O tempo do paiting demora de acordo com o tipo de mudança que é feita.
 
+### Camadas
+- Para minimizar o tempo de **repaiting**, geralmente a tela é dividida em diversas camadas.
+	- Você pode usar `will-change` e outras propriedades que vão gerar camadas.
+	- No entanto camadas usa muito gerenciamento de memória, evite usar em excesso.
+- **Compositing** acontece para desenhar as camadas na ordem correta.
+
 ### Reflow
 - Reflow é quando é necessário ser feito mudanças de tamanho ou posição (mudanças de **layout**) após o primeiro carregamento da página.
 - Exemplo:
