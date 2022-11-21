@@ -57,10 +57,10 @@ P
 
 ### CSSOM (CSS Object Model)
 - Árvore criada a partir do CSS.
-- Enquanto o navegador está carregando o CSS, a páhina é bloqueada.
+- Enquanto o navegador está carregando o CSS, a página é bloqueada.
 - Isso acontece porque as regras do CSS podem ser reescritas até que a CSSOM seja completada.
 - A criação da árvore do CSS é muito rápida.
-- Seletores mais espefícios (como `.foo {}`) são mais rápidos do que os menos específicos (como `.bar .foo {}`).
+- Seletores mais específicos (como `.foo {}`) são mais rápidos do que os menos específicos (como `.bar .foo {}`).
 - Isso acontece porque se você usa o `.foo`, então o navegador vai precisar procurar o ancestral dele `.bar`.
 - Esse tipo de otimização é bem mínima, pois o navegador renderiza essa árvore do CSS **muito rápido**.
 
