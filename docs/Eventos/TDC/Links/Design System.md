@@ -1,4 +1,4 @@
->**Tags:** #design-system
+>**Tags:** [[design-system]]
 
 ![[Pasted image 20220824123125.png]]
 

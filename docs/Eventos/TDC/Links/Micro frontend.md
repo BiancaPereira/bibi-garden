@@ -1,5 +1,5 @@
 
->**Tags:** #micro-frontend
+>**Tags:** [[micro-frontend]]
 
 - Exemplo de microfrontend
 	- ![[Pasted image 20220824123027.png]]

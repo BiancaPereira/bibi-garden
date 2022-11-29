@@ -1,4 +1,4 @@
-#performance #css #crp
+[[performance]] [[css]] [[crp]]
 
 > [!info] Referências
 > - https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works

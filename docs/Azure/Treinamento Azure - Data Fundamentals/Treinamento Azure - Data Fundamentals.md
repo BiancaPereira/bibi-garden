@@ -1,7 +1,7 @@
 ### Metadados
 Dia: 13/07/2022
 Descrição: Parte 1 do treinamento
-Tags: #bancodedados #dba #azure
+Tags: [[bancodedados]] [[dba]] [[azure]]
 
 ---
 

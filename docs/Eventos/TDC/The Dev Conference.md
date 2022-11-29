@@ -1,5 +1,5 @@
 >**Dia**: 24/08/2022
->**Tags:** #evento
+>**Tags:** [[evento]]
 
 Palestras:
 - [[Design System]]
