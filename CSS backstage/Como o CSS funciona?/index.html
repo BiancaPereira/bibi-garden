@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../CSS%20Modules/CSS%20Modules/" rel="prev"/>
+<link href="../../Eventos/TDC/The%20Dev%20Conference/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
+<title>Como o CSS funciona? - Bibi Garden 🪴</title>
+<link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#inicio">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Bibi Garden 🪴" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Bibi Garden 🪴">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Bibi Garden 🪴
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Como o CSS funciona?
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Bibi Garden 🪴" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Bibi Garden 🪴">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Bibi Garden 🪴
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Azure
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Azure" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Azure
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+          Treinamento Azure   Data Fundamentals
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Treinamento Azure   Data Fundamentals" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Treinamento Azure   Data Fundamentals
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Azure/Treinamento%20Azure%20-%20Data%20Fundamentals/Treinamento%20Azure%20-%20Data%20Fundamentals/">
+        Treinamento Azure   Data Fundamentals
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" id="__nav_2_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_2">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Links" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Azure/Treinamento%20Azure%20-%20Data%20Fundamentals/Links/Data%20Analyst/">
+        Data Analyst
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Azure/Treinamento%20Azure%20-%20Data%20Fundamentals/Links/Database%20administrator/">
+        Database administrator
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          CSS Modules
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CSS Modules" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          CSS Modules
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CSS%20Modules/CSS%20Modules/">
+        CSS Modules
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          CSS backstage
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CSS backstage" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          CSS backstage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Como o CSS funciona?
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Como o CSS funciona?
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inicio">
+    Início
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#critical-rendering-path">
+    Critical Rendering Path
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-passos-do-crp">
+    5 passos do CRP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dom-document-object-model">
+    DOM (Document Object Model)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cssom-css-object-model">
+    CSSOM (CSS Object Model)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#melhorando-a-performance-do-css">
+    Melhorando a performance do CSS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#render-tree">
+    Render tree
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout">
+    Layout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#painting">
+    Painting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#camadas">
+    Camadas
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reflow">
+    Reflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#otimizando-o-crp">
+    Otimizando o CRP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#problemas-de-performance">
+    Problemas de performance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#como-e-feito-as-requisicoes-ao-browser">
+    Como é feito as requisições ao browser
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primeira-renderizacao">
+    Primeira renderização
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessibility-tree">
+    Accessibility Tree
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Eventos
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Eventos" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Eventos
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1">
+          TDC
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="TDC" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+          TDC
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Eventos/TDC/The%20Dev%20Conference/">
+        The Dev Conference
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_2" id="__nav_5_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1_2">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Links" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Eventos/TDC/Links/Clean%20Architecture%20no%20Front/">
+        Clean Architecture no Front
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Eventos/TDC/Links/Criptografia%20e%20autentica%C3%A7%C3%A3o%20biom%C3%A9trica%20nativa%20no%20navegador/">
+        Criptografia e autenticação biométrica nativa no navegador
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Eventos/TDC/Links/Design%20System/">
+        Design System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Eventos/TDC/Links/Micro%20frontend/">
+        Micro frontend
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          React
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="React" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/Axios/">
+        Axios
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/React%20Query%20como%20State%20Management/">
+        React Query como State Management
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/React%20Query/">
+        React Query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/React%20b%C3%A1sico/">
+        React básico
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5">
+          Mapas mentais
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mapas mentais" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Mapas mentais
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/Mapas%20mentais/Conhe%C3%A7o/">
+        React
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../React/Mapas%20mentais/Estudar/">
+        React
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inicio">
+    Início
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#critical-rendering-path">
+    Critical Rendering Path
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-passos-do-crp">
+    5 passos do CRP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dom-document-object-model">
+    DOM (Document Object Model)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cssom-css-object-model">
+    CSSOM (CSS Object Model)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#melhorando-a-performance-do-css">
+    Melhorando a performance do CSS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#render-tree">
+    Render tree
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout">
+    Layout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#painting">
+    Painting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#camadas">
+    Camadas
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reflow">
+    Reflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#otimizando-o-crp">
+    Otimizando o CRP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#problemas-de-performance">
+    Problemas de performance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#como-e-feito-as-requisicoes-ao-browser">
+    Como é feito as requisições ao browser
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primeira-renderizacao">
+    Primeira renderização
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessibility-tree">
+    Accessibility Tree
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Como o CSS funciona?</h1>
+<p>[[performance]] [[css]] [[crp]]</p>
+<blockquote>
+<p>[!info] Referências
+- https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works
+- https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path
+- https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS
+- https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work</p>
+</blockquote>
+<h3 id="inicio">Início<a class="headerlink" href="#inicio" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para renderizar na tela um documento, o navegador combina o HTML e CSS dele.</li>
+<li>Cada navegador faz isso de formas diferentes, mas semelhantes no geral.</li>
+</ul>
+<h3 id="critical-rendering-path">Critical Rendering Path<a class="headerlink" href="#critical-rendering-path" title="Permanent link">¶</a></h3>
+<ul>
+<li>É o passo a passo para o navegador converter HTML + CSS + JS em pixels na tela.</li>
+</ul>
+<h3 id="5-passos-do-crp">5 passos do CRP<a class="headerlink" href="#5-passos-do-crp" title="Permanent link">¶</a></h3>
+<ol>
+<li>Navegador carrega o HTML e converte ele em DOM.</li>
+<li>Depois é carregado o CSS e construído o CSSOM.</li>
+<li>É feito a análise do CSS, onde é inserido os estilos para o nó correto da árvore do DOM (essa é a <strong>render tree</strong>: CSS + HTML juntos).</li>
+<li>O layout é quando é calculado o tamanho e localização de cada node na tela.</li>
+<li>A página é exibida na tela através do processo de <strong>painting</strong>. </li>
+</ol>
+<p><img alt="Pasted image 20221119223639.png" src="../Imagens/Pasted%20image%2020221119223639.png"/></p>
+<blockquote>
+<p>Depois que é carregado o Javascript, pode ser que a árvore DOM seja modificada.</p>
+<p>Enquanto o CSS está sendo transformado, o Javascript está sendo baixo e compilado.</p>
+</blockquote>
+<h3 id="dom-document-object-model">DOM (Document Object Model)<a class="headerlink" href="#dom-document-object-model" title="Permanent link">¶</a></h3>
+<ul>
+<li>Árvore criada a partir do HMTL.</li>
+<li>A construção do DOM é incremental e não bloqueia a página.</li>
+<li>Quando mais nodes você tiver, mais tempo o CRP vai tomar.</li>
+<li>Alguns nodes a mais não fazem diferença, mas se tiver muitos pode impactar na performance.</li>
+</ul>
+<p>Exemplo de DOM:</p>
+<pre><code class="language-html">&lt;p&gt;
+  Let's use:
+  &lt;span&gt;Cascading&lt;/span&gt;
+  &lt;span&gt;Style&lt;/span&gt;
+  &lt;span&gt;Sheets&lt;/span&gt;
+&lt;/p&gt;
+</code></pre>
+<p>Como eles se organizam em nodes:</p>
+<pre><code>P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+    └─ "Sheets"
+</code></pre>
+<h3 id="cssom-css-object-model">CSSOM (CSS Object Model)<a class="headerlink" href="#cssom-css-object-model" title="Permanent link">¶</a></h3>
+<ul>
+<li>Árvore criada a partir do CSS.</li>
+<li>Enquanto o navegador está carregando o CSS, a página é bloqueada.</li>
+<li>Isso acontece porque as regras do CSS podem ser reescritas até que a CSSOM seja completada.</li>
+<li>A criação da árvore do CSS é muito rápida.</li>
+<li>Seletores mais específicos (como <code>.foo {}</code>) são mais rápidos do que os menos específicos (como <code>.bar .foo {}</code>).</li>
+<li>Isso acontece porque se você usa o <code>.foo</code>, então o navegador vai precisar procurar o ancestral dele <code>.bar</code>.</li>
+<li>Esse tipo de otimização é bem mínima, pois o navegador renderiza essa árvore do CSS <strong>muito rápido</strong>.</li>
+</ul>
+<h3 id="melhorando-a-performance-do-css">Melhorando a performance do CSS<a class="headerlink" href="#melhorando-a-performance-do-css" title="Permanent link">¶</a></h3>
+<ul>
+<li>As partes que mais travam no carregamento da tela são os scrollings e animações.</li>
+<li>Minimize os arquivos.</li>
+<li>Separe os arquivos de forma que o navegador só carregue aquilo que é necessário naquela hora, como:</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Loading and parsing styles.css is render-blocking --&gt;
+&lt;link rel="stylesheet" href="styles.css" /&gt;
+
+&lt;!-- Loading and parsing print.css is not render-blocking --&gt;
+&lt;link rel="stylesheet" href="print.css" media="print" /&gt;
+
+&lt;!-- Loading and parsing mobile.css is not render-blocking on large screens --&gt;
+&lt;link
+  rel="stylesheet"
+  href="mobile.css"
+  media="screen and (max-width: 480px)" /&gt;
+</code></pre>
+<h3 id="render-tree">Render tree<a class="headerlink" href="#render-tree" title="Permanent link">¶</a></h3>
+<ul>
+<li>É gerada quando a árvore do CSS é incluída na árvore do DOM e é criado a Render Tree.</li>
+<li>Para construir a render tree, o navegador checa cada node.</li>
+<li>Nessa hora, o navegador determina quais são as regras do CSS agregadas para cada node.</li>
+<li>Na render tree só temos os elementos <strong>visíveis na tela</strong>.</li>
+</ul>
+<h3 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">¶</a></h3>
+<ul>
+<li>O layout é o processo que determina o tamanho e a localização de tudo na página.</li>
+<li>Depois que o layout é determinado, os pixels são pintados na tela.</li>
+<li>Ele depende do tamanho da tela (viewport size).</li>
+<li>Determia o tamanho e altura de cada elemento.</li>
+<li>Determina onde cada elemento fica em relação aos outros.</li>
+<li>Toda vez que a render tree é modificada, o processo de layout é ativado.</li>
+<li>Modificações na render tree poden ser: adição de nodes, conteúdo alterado, atualizado mox model (block, inline), mudança de tamanho da tela (como mudar a orientação do celular).</li>
+<li>Tem que tomar cuidado para não causar muitas mudanças na render tree para não causar travamentos na hora do scroll ou durante animações.</li>
+</ul>
+<h3 id="painting">Painting<a class="headerlink" href="#painting" title="Permanent link">¶</a></h3>
+<ul>
+<li>O paint é o último passo, ele é responsável por pintar os pixels na tela.</li>
+<li>Ao carregar uma tela, a tela inteira sofre o painting.<ul>
+<li>Esse primeiro painting é chamado de "first meaningful paint".</li>
+</ul>
+</li>
+<li>Depois, apenas a parte necessária da tela que sofrer mudanças sofrerá o re-painting.</li>
+<li>Paiting é um processo bem rápido, e não impacta tanto na performance.</li>
+<li>O tempo do paiting demora de acordo com o tipo de mudança que é feita.</li>
+</ul>
+<h3 id="camadas">Camadas<a class="headerlink" href="#camadas" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para minimizar o tempo de <strong>repaiting</strong>, geralmente a tela é dividida em diversas camadas.<ul>
+<li>Você pode usar <code>will-change</code> e outras propriedades que vão gerar camadas.</li>
+<li>No entanto camadas usa muito gerenciamento de memória, evite usar em excesso.</li>
+</ul>
+</li>
+<li><strong>Compositing</strong> acontece para desenhar as camadas na ordem correta.</li>
+</ul>
+<h3 id="reflow">Reflow<a class="headerlink" href="#reflow" title="Permanent link">¶</a></h3>
+<ul>
+<li>Reflow é quando é necessário ser feito mudanças de tamanho ou posição (mudanças de <strong>layout</strong>) após o primeiro carregamento da página.</li>
+<li>Exemplo:<ul>
+<li>Imagine que você carregou um documento HTML com uma imagem, e essa imagem vai ser baixada só depois.</li>
+<li>Se você não determinou o tamanho dessa imagem no HTML, então quando ela for carrega será feito um processo de reflow.</li>
+</ul>
+</li>
+</ul>
+<h3 id="otimizando-o-crp">Otimizando o CRP<a class="headerlink" href="#otimizando-o-crp" title="Permanent link">¶</a></h3>
+<ul>
+<li>Priorize a ordem e carregue os recursos prioritários primeiro.</li>
+<li>Diminuia o número de requests e o diminua o tamanho dos arquivos prioritários.</li>
+<li>Diminua a quantidade de arquivos principais e deixe com que os arquivos não-críticos sejam carregados depois ou de forma assíncrona.</li>
+</ul>
+<h3 id="problemas-de-performance">Problemas de performance<a class="headerlink" href="#problemas-de-performance" title="Permanent link">¶</a></h3>
+<ul>
+<li>Maiores problemas de performance na web:<ul>
+<li>🟠  <strong>Período de latência</strong> (tempo do início de um evento até ele de fato iniciar a execução).</li>
+<li>Navegadores são single-thread (executam um comando por vez).</li>
+</ul>
+</li>
+<li>Para que o site seja rápido, é necessário minimizar as requisições da thread principal.</li>
+</ul>
+<h3 id="como-e-feito-as-requisicoes-ao-browser">Como é feito as requisições ao browser<a class="headerlink" href="#como-e-feito-as-requisicoes-ao-browser" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Quando o site carrega pela primeira vez, é necessário fazer uma busca de <strong>DNS</strong> do site.</p>
+<ul>
+<li>A latência de uma rede de celular para fazer essa busca pode ser demorada.</li>
+<li>Depois que o endereço de <strong>IP</strong> é localizado, será aberto uma comunicação entre o navegador e o servidor, através do <strong>TCP</strong>.
+<img alt="Pasted image 20221120184907.png" src="../Imagens/Pasted%20image%2020221120184907.png"/></li>
+</ul>
+</li>
+<li>
+<p>Para começar a estabelecer uma conexão com o servidor e poder fazer as primeiras requisições, todo o caminho abaixo é feito:
+<img alt="Pasted image 20221120185434.png" src="../Imagens/Pasted%20image%2020221120185434.png"/></p>
+</li>
+</ul>
+<h3 id="primeira-renderizacao">Primeira renderização<a class="headerlink" href="#primeira-renderizacao" title="Permanent link">¶</a></h3>
+<ul>
+<li>Na primeira renderização geralmente é feito uma <strong>chamada de 14kb</strong>, e depois essa chamada vai aumentando de tamanho de acordo com o tanto que a rede aguenta.<ul>
+<li>Por isso é importante priorizar o que é trazido na primeira chamada ao servidor.</li>
+<li>É preciso que já seja enviado nesses 14kb o HTML/CSS que deve ser exibido nessa primeira chamada.</li>
+<li>Depois que é recebido o HTML/CSS e Javascript inicial, que eles começam a ser carregados e transformados em render tree, até que sejam renderizados na tela.</li>
+</ul>
+</li>
+<li>Tags <code>&lt;script&gt;</code> sem <code>async</code> geralmente bloqueiam o carregamento da página (por isso costumamos deixar eles no fim do da tag <code>&lt;body&gt;</code>).</li>
+</ul>
+<h3 id="accessibility-tree">Accessibility Tree<a class="headerlink" href="#accessibility-tree" title="Permanent link">¶</a></h3>
+<ul>
+<li>Existe uma árvore de acessibilidade que é como se fosse o DOM semântico.</li>
+<li>Ela é a <strong>AOM</strong> - Accessibility Object Model.</li>
+<li>Enquanto a AOM não é construída, a página não é acessível a leitores de tela.</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
