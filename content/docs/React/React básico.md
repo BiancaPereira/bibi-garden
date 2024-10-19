@@ -1,0 +1,20 @@
+- One way data binding
+- Controlled components é um componente que seu estado é controlado pelo componente pai
+- Router é importante para fazer o mapeamento de qual componente devemos exibir na tela para o usuário
+- Redux
+	- Action é onde armazena o nome da ação
+	- Reducer é onde muda os dados
+	- Store é onde guarda os dados
+- O **pure component** no React é quando um componente que recebe o mesmo prop e o mesmo state, exibe o mesmo comportamento
+	- Ele é mais rápido que o *React.Component*
+	- Usando quando se tem states simples
+- Uncontrolled components são componentes que o React não tem controle total sobre ele, isso é feito ao manipular no DOM diretamente e usa-se os refs para isso
+- **StrictMode** é uma ferramenta no React que te ajuda a encontrar potenciais problemas
+	- Você faz um wrapper com o StrictMode envolvendo os componentes que você deseja avaliar e debuggar 
+- React Fiber é uma arquitetura para que a rendedização seja implementada de forma incremental e que ajuda muito na melhoria de performance de animações em React
+- **Portal** é uma forma de renderizar um filho do React que não está dentro da árvore do pai
+	- Exemplo é a criação de modais
+- UseReducer = método dispatch
+	- Muito bom para lidar com states complexos
+	- Ou quando o próximo estado depende do anterior
+- Use Refs = current
