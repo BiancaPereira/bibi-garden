@@ -26,7 +26,7 @@ Parte 1
 
 ### Batch data / streaming data
 
-![[Pasted image 20220713141856.png]]
+![[docs/Azure/Treinamento Azure - Data Fundamentals/Imagens/Pasted image 20220713141856.png]]
 
 Batch
 * No batch se falhar um registro, todo o resto falha
@@ -36,11 +36,11 @@ Streaming
 * Pequeno volume de dados
 
 ### Roles / cargos do banco de dados
-![[Pasted image 20220713142434.png]]
+![[docs/Azure/Treinamento Azure - Data Fundamentals/Imagens/Pasted image 20220713142434.png]]
 
-* [[Database administrator]]
+* [[docs/Azure/Treinamento Azure - Data Fundamentals/Links/Database administrator]]
 * Data Engineer
-* [[Data Analyst]]
+* [[docs/Azure/Treinamento Azure - Data Fundamentals/Links/Data Analyst]]
 
 
 ### Conceitos básicos
