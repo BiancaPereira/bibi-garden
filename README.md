@@ -8,4 +8,4 @@ Saiba mais sobre aqui: https://github.com/MaggieAppleton/digital-gardeners
 ### Estou usando
 - Escrevo as notas usando o [Obsidian](https://obsidian.md/)
 - Faço o sync automático das notas usando o [Obsidian Github Sync](https://github.com/BiancaPereira/Obsidian-GitHub-Sync)
-- Publico as notas usando o **Github Pages** através do template do [jobindjohn](https://github.com/jobindjohn/obsidian-publish-mkdocs)
+- Publico as notas usando o **[Github Pages](https://quartz.jzhao.xyz/)**
