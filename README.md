@@ -9,4 +9,4 @@ Saiba mais sobre aqui: https://github.com/MaggieAppleton/digital-gardeners
 - Escrevo as notas usando o [Obsidian](https://obsidian.md/)
 - Faço o sync automático das notas usando o [Obsidian Github Sync](https://github.com/BiancaPereira/Obsidian-GitHub-Sync)
 - Publico as notas usando o Github Pages
-- Utilizo o static-site generator [Quartz]((https://quartz.jzhao.xyz/))
+- Utilizo o static-site generator [Quartz](https://quartz.jzhao.xyz/)
