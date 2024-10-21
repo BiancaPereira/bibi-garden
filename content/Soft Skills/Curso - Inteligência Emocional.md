@@ -40,7 +40,20 @@ Matriz da assertividade:
 
 Para ter conversas difíceis:
 1. Tire o elefante da sala (comece a falar)
-2. Adulto (você está falando com uma pessoa adulta e capaz)
+2. Adulto (trate os outros como adultos)
 3. Médico (finja que está num consultório e fale o que está sentindo)
-4. Pergunte (aprofunde o diálogo)
+4. Pergunte (aprofunde o diálogo com perguntas)
+
+
+### Conflitos
+Como mediar conflitos:
+![[mediar-conflito.png]]
+
+## Módulo 3
+
+
+### Problemas
+
+Os 3 círculos dos problemas:
+![[circulos-problemas.png]]
 
