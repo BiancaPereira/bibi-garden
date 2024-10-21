@@ -1,3 +1,5 @@
-## Meu Jardim 🪴
+---
+title: Meu Jardim 🪴
+---
 
 Depois adiciono mais informações aqui.
