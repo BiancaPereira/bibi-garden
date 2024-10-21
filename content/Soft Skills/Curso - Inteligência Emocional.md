@@ -47,13 +47,31 @@ Para ter conversas difíceis:
 
 ### Conflitos
 Como mediar conflitos:
+
 ![[mediar-conflito.png]]
 
 ## Módulo 3
-
 
 ### Problemas
 
 Os 3 círculos dos problemas:
 ![[circulos-problemas.png]]
+
+## Módulo 4
+
+
+> [!TIP] Pulo do gato
+> Se adapte, seja flexível.
+
+
+Os 3 C's:
+1. Comece
+2. Continue
+3. Conclua
+
+
+Mente anti-frágil:
+* **Frágil**: se quebra com facilidade
+* **Resiliente**: se adapta, mas retorna ao estado inicial.
+* **Anti-frágil**: fica mais forte depois das dificuldades.
 
