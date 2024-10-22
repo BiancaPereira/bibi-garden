@@ -1,4 +1,4 @@
->**Tags:** [[arquitetura]] [[clean-architecture]]
+#arquitetura #frontend 
 
 - Diferença entre MVC e Clean Architecture
 	- ![[Pasted image 20220824143437.png]]

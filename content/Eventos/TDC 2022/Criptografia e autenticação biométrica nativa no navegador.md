@@ -1,4 +1,5 @@
->**Tags:** [[biometria]] [[autenticação]]
+#auth
+
 >**Autor:** William Grasel
 
 ![[Pasted image 20220824170754.png]]

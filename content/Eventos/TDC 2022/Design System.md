@@ -1,4 +1,4 @@
->**Tags:** [[design-system]]
+#designsystem #frontend 
 
 ![[Pasted image 20220824123125.png]]
 
