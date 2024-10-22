@@ -1,5 +1,7 @@
-#evento
-
+---
+tags:
+  - evento
+---
 >**Dia**: 24/08/2022
 
 Palestras:

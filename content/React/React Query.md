@@ -1,3 +1,9 @@
+---
+tags:
+  - react
+  - frontend
+  - tanstack
+---
 > [!info] Código de Exemplo
 > Link no Replit: https://replit.com/@biibis/Axios-React-Query-Test
 

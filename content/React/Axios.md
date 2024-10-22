@@ -1,3 +1,8 @@
+---
+tags:
+  - frontend
+  - react
+---
 > [!info] Código de Exemplo
 > Link no Replit: [Test Axios React](https://replit.com/@biibis/Test-Axios-React#src/App.tsx)
 

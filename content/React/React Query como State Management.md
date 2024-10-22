@@ -1,4 +1,9 @@
-
+---
+tags:
+  - react
+  - frontend
+  - tanstack
+---
 > [!NOTE] Leituras
 > - https://tkdodo.eu/blog/react-query-as-a-state-manager
 > - https://dev.to/juandj/using-react-query-to-solve-state-management-in-your-react-app-4kf9

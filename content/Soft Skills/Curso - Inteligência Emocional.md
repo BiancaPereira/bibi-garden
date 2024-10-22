@@ -1,4 +1,9 @@
-
+---
+tags:
+  - curso
+  - softskills
+  - inteligencia-emocional
+---
 > [!DOCS] Curso Inteligência Emocional 4.0 da Conquer
 > Curso com certificado gratuito pela Conquer.
 

@@ -1,5 +1,9 @@
-#arquitetura #frontend 
-
+---
+tags:
+  - arquitetura
+  - frontend
+  - cleancode
+---
 - Diferença entre MVC e Clean Architecture
 	- ![[Pasted image 20220824143437.png]]
 	- MVC é mais antigo

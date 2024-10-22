@@ -1,3 +1,8 @@
+---
+tags:
+  - frontend
+  - react
+---
 - One way data binding
 - Controlled components é um componente que seu estado é controlado pelo componente pai
 - Router é importante para fazer o mapeamento de qual componente devemos exibir na tela para o usuário
