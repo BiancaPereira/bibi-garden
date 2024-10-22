@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Soft Skills/Curso - Inteligência Emocional.md",
+                "file": "content/Eventos/TDC 2022/Clean Architecture no Front.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Curso - Inteligência Emocional"
+              "title": "Clean Architecture no Front"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Soft Skills/Curso - Inteligência Emocional.md"
+                "file": "content/Eventos/TDC 2022/Clean Architecture no Front.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Curso - Inteligência Emocional"
+              "title": "Outline of Clean Architecture no Front"
             }
           },
           {
@@ -177,8 +177,16 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "3c07f2ee27f56de3",
+  "active": "483ac49a1da8d9a4",
   "lastOpenFiles": [
+    "content/CSS/CSS Modules/CSS Modules.md",
+    "content/CSS/CSS backstage/Como o CSS funciona?.md",
+    "content/Azure/Treinamento Azure - Data Fundamentals/Treinamento Azure - Data Fundamentals.md",
+    "content/Azure/Treinamento Azure - Data Fundamentals/Database administrator.md",
+    "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md",
+    "content/Eventos/TDC 2022/Criptografia e autenticação biométrica nativa no navegador.md",
+    "content/Eventos/TDC 2022/Clean Architecture no Front.md",
+    "content/Soft Skills/Curso - Inteligência Emocional.md",
     "content/React/React Query como State Management.md",
     "content/React/React Query.md",
     "content/React/React básico.md",
@@ -186,12 +194,7 @@
     "content/Eventos/TDC 2022/Sumário - The Dev Conference.md",
     "content/Eventos/TDC 2022/Micro frontend.md",
     "content/Eventos/TDC 2022/Design System.md",
-    "content/Eventos/TDC 2022/Criptografia e autenticação biométrica nativa no navegador.md",
-    "content/Eventos/TDC 2022/Clean Architecture no Front.md",
     "content/index.md",
-    "content/Azure/Treinamento Azure - Data Fundamentals/Treinamento Azure - Data Fundamentals.md",
-    "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md",
-    "content/Soft Skills/Curso - Inteligência Emocional.md",
     "content/CSS",
     "content/Soft Skills/Imagens/circulos-problemas.png",
     "content/Soft Skills/Imagens/circulo-problemas.png",

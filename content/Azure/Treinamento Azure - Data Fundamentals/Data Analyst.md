@@ -1,5 +1,8 @@
-## Data Analyst
-
+---
+tags:
+  - azure
+  - cloud
+---
 ![[Pasted image 20220713143107.png]]
 
 Ferramentas que ele usa:

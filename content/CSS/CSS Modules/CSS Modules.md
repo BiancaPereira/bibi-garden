@@ -1,4 +1,8 @@
-
+---
+tags:
+  - css
+  - frontend
+---
 > [!info] Leituras
 > - https://github.com/css-modules/css-modules
 > - https://dev.to/gmantovani97/porque-utilizar-css-modules-no-react-1a93

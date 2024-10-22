@@ -1,5 +1,8 @@
-[[performance]] [[css]] [[crp]]
-
+---
+tags:
+  - css
+  - frontend
+---
 > [!info] Referências
 > - https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 > - https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path

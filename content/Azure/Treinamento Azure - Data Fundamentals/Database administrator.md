@@ -1,5 +1,8 @@
-### Database administrator
-
+---
+tags:
+  - cloud
+  - azure
+---
 ![[Pasted image 20220713142836.png]]
 
 Ferramentas que ele usa:

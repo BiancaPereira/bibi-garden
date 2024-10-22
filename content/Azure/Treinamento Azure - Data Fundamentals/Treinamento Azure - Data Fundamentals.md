@@ -1,5 +1,8 @@
-#azure #cloud
-
+---
+tags:
+  - azure
+  - cloud
+---
 > Dia: 13/07/2022
 
 ---
