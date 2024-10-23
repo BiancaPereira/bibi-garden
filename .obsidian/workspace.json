@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md",
+                "file": "content/Livros/Clean Code - Uncle Bob.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Analyst"
+              "title": "Clean Code - Uncle Bob"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md"
+                "file": "content/Livros/Clean Code - Uncle Bob.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Data Analyst"
+              "title": "Outline of Clean Code - Uncle Bob"
             }
           },
           {
@@ -177,14 +177,16 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "483ac49a1da8d9a4",
+  "active": "738ae11bb6894ac5",
   "lastOpenFiles": [
+    "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md",
+    "content/Livros/Clean Code - Uncle Bob.md",
+    "content/Livros",
     "content/Eventos/TDC 2022/Clean Architecture no Front.md",
     "content/CSS/CSS Modules/CSS Modules.md",
     "content/CSS/CSS backstage/Como o CSS funciona?.md",
     "content/Azure/Treinamento Azure - Data Fundamentals/Treinamento Azure - Data Fundamentals.md",
     "content/Azure/Treinamento Azure - Data Fundamentals/Database administrator.md",
-    "content/Azure/Treinamento Azure - Data Fundamentals/Data Analyst.md",
     "content/Eventos/TDC 2022/Criptografia e autenticação biométrica nativa no navegador.md",
     "content/Soft Skills/Curso - Inteligência Emocional.md",
     "content/React/React Query como State Management.md",
