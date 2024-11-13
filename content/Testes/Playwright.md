@@ -75,7 +75,7 @@ await page.getByRole('link', { name: 'next page' }).click();
 ```
 
 ### Exemplos
-1. Testes variados: https://github.com/akshayp7/playwright-typescript-playwright-test/tree/main/tests
-2. Testes com mock de APIs: https://github.com/codewithmmak/playwright-api-testing/tree/master/tests
-3. Esse é o exemplo que vem quando você instala o Playwright: https://github.com/BakkappaN/PlaywrightTutorialFullCourse/blob/main/tests-examples/demo-todo-app.spec.js
+1. ⭐️ Esse é o exemplo que vem quando você instala o Playwright: https://github.com/BakkappaN/PlaywrightTutorialFullCourse/blob/main/tests-examples/demo-todo-app.spec.js
+2. Testes variados: https://github.com/akshayp7/playwright-typescript-playwright-test/tree/main/tests
+3. Testes com mock de APIs: https://github.com/codewithmmak/playwright-api-testing/tree/master/tests
 4. Testes feitos durante um curso do Youtube: https://github.com/BakkappaN/PlaywrightTutorialFullCourse/tree/main/tests
