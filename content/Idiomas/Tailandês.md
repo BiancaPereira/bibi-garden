@@ -1,0 +1,5 @@
+---
+tags:
+  - idioma
+  - thai
+---
