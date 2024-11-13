@@ -46,7 +46,9 @@ npx playwright test --trace on
 
 - Ative essa opção de lint:
 ```json
-'@typescript-eslint/no-floating-promises': 'warn',
+{
+	'@typescript-eslint/no-floating-promises': 'warn',
+}
 ```
 
 

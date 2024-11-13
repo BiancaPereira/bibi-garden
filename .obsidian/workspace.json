@@ -11,13 +11,14 @@
             "id": "483ac49a1da8d9a4",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "content/Idiomas/Tailandês.md",
-                "staged": false
+                "file": "content/Testes/Playwright.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (Tailandês)"
+              "icon": "lucide-file",
+              "title": "Playwright"
             }
           }
         ]
@@ -137,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "content/Testes/Playwright.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Playwright"
             }
           },
           {
